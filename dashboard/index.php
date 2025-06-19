@@ -69,13 +69,13 @@
 									</div>
 								</div>
 								<div class="col-sm-1"></div>
-								<div class="col-sm-6 col-xs-12">
+								<div class="col-sm-8 col-xs-12">
 									<div>
 										<div class="table-responsive" id="tableDashboard">
 											<table class="table" style="width: 100%">
 												<tbody>
 													<tr>
-														<td colspan="5">
+														<td colspan="7">
 															<strong>
 																LATEST UPDATE 
 																<span id="spanDisplayPriorityDatetime"></span>
@@ -88,6 +88,8 @@
 														<td><strong>PART CODE</strong></td>
 														<td><strong>PART NAME</strong></td>
 														<td><strong>TOOL</strong></td>
+														<td><strong>DATE REQUEST</strong></td>
+														<td><strong>LOCATION</strong></td>
 													</tr>
 													<tr>
 														<td style="width: 10px">1</td>
@@ -95,6 +97,8 @@
 														<td class="tdPartCode"></td>
 														<td class="tdPartName"></td>
 														<td class="tdTool"></td>
+														<td class="tdDateRequest"></td>
+														<td class="tdLocation"></td>
 													</tr>
 													<tr>
 														<td style="width: 10px">2</td>
@@ -102,6 +106,8 @@
 														<td class="tdPartCode"></td>
 														<td class="tdPartName"></td>
 														<td class="tdTool"></td>
+														<td class="tdDateRequest"></td>
+														<td class="tdLocation"></td>
 													</tr>
 													<tr>
 														<td style="width: 10px">3</td>
@@ -109,6 +115,8 @@
 														<td class="tdPartCode"></td>
 														<td class="tdPartName"></td>
 														<td class="tdTool"></td>
+														<td class="tdDateRequest"></td>
+														<td class="tdLocation"></td>
 													</tr>
 													<tr>
 														<td style="width: 10px">4</td>
@@ -116,6 +124,8 @@
 														<td class="tdPartCode"></td>
 														<td class="tdPartName"></td>
 														<td class="tdTool"></td>
+														<td class="tdDateRequest"></td>
+														<td class="tdLocation"></td>
 													</tr>
 													<tr>
 														<td style="width: 10px">5</td>
@@ -123,6 +133,8 @@
 														<td class="tdPartCode"></td>
 														<td class="tdPartName"></td>
 														<td class="tdTool"></td>
+														<td class="tdDateRequest"></td>
+														<td class="tdLocation"></td>
 													</tr>
 												</tbody>
 											</table>
@@ -132,13 +144,13 @@
 									<div id="table1"></div>
 									
 								</div>
-								<div class="col-sm-1">
+								<!-- <div class="col-sm-1">
 									<p>
 										<div class="pull-right">
 											<button type="button" class="btn btn-success" id="btnExport">Export</button>
 										</div>
 									</p>
-								</div>
+								</div> -->
 							</div>
 							<div id="dashboard2-table1">
 							</div>

@@ -330,35 +330,28 @@ function displayPriority(){
             $("#tdTop1").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.b));
             $("#tdTop1").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.b));
             $("#tdTop1").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.b));
+            displayDateRequestAndLocation(data.b, $("#tdTop1").closest("tr").find(".tdDateRequest"), $("#tdTop1").closest("tr").find(".tdLocation"));
+
 
             $("#tdTop2").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.c));
             $("#tdTop2").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.c));
             $("#tdTop2").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.c));
+            displayDateRequestAndLocation(data.b, $("#tdTop2").closest("tr").find(".tdDateRequest"), $("#tdTop2").closest("tr").find(".tdLocation"));
 
             $("#tdTop3").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.d));
             $("#tdTop3").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.d));
             $("#tdTop3").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.d));
+            displayDateRequestAndLocation(data.b, $("#tdTop3").closest("tr").find(".tdDateRequest"), $("#tdTop3").closest("tr").find(".tdLocation"));
 
             $("#tdTop4").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.e));
             $("#tdTop4").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.e));
             $("#tdTop4").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.e));
+            displayDateRequestAndLocation(data.b, $("#tdTop4").closest("tr").find(".tdDateRequest"), $("#tdTop4").closest("tr").find(".tdLocation"));
 
             $("#tdTop5").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.f));
             $("#tdTop5").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.f));
             $("#tdTop5").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.f));
-
-            /* setTimeout(() => {
-                
-                $(".tdPartCode").css("word-wrap", "break-word");
-                $(".tdPartCode").css("word-break", "break-all");
-
-                $(".tdPartName").css("word-wrap", "break-word");
-                $(".tdPartName").css("word-break", "break-all");
-
-                $(".tdTool").css("word-wrap", "break-word");
-                $(".tdTool").css("word-break", "break-all");
-                
-            }, 1000); */
+            displayDateRequestAndLocation(data.b, $("#tdTop5").closest("tr").find(".tdDateRequest"), $("#tdTop5").closest("tr").find(".tdLocation"));
             
 
             
@@ -368,6 +361,33 @@ function displayPriority(){
         }
     });
 }
+
+function displayDateRequestAndLocation(moldCode, elementRequestDate, elementLocation){
+
+    $.ajax({
+        url: "/"+rootFolder+'/getRecords/getLastDateAndLocationByMoldCode.php', // Replace with your server-side script URL
+        type: 'POST',
+        data:{
+            moldCode: moldCode,
+        },
+        dataType: 'json',
+        success: function(data) {
+            console.log(data);
+            elementRequestDate.text(data.REQUEST_DATE);
+            elementLocation.text(setLocation(data.LOCATION));
+
+        },
+        error: function(error) {
+            // alert('Error fetching data from the database.');
+        }
+    });
+
+}
+
+
+
+
+
 
 
 

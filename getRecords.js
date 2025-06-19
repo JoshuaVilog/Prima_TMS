@@ -893,6 +893,20 @@ function setRequestType(id){
 
     }
 }
+function setLocation(id){
+    let list = JSON.parse(localStorage.getItem(lsLocationList));
+
+    if(id == "" || id == null || id == "0"){
+        return "";
+    } else {
+        var result = list.find(function(value) {
+            return value.a === id;
+        });
+        
+        return  result.b;
+
+    }
+}
 
 function getCurrentDate(){
     let currentDate = new Date();
