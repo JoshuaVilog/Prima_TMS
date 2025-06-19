@@ -18,6 +18,10 @@ function fetchDataAndInitializeTable() {
             table = new Tabulator("#table-record", {
                 data: list,
                 layout: "fitDataFill", // Adjust table height based on the data
+                pagination: "local",
+                paginationSize: 25,
+                paginationSizeSelector: [25, 50, 100],
+                page: 1,
                 columns: [
                     {title: "RID", field: "a", visible: false},
                     {title: "MOLD CTRL", field: "c", headerFilter: "input", resizable: false},

@@ -29,6 +29,10 @@ function fetchDataAndInitializeTable() {
             table1 = new Tabulator("#table-records", {
                 data: listTrial,
                 layout: "fitDataFill", // Adjust table height based on the data
+                pagination: "local",
+                paginationSize: 25,
+                paginationSizeSelector: [25, 50, 100],
+                page: 1,
                 selectableRows:true,
                 /* groupBy: function(data) {
                     // Group "1", "2", and "4" together, and "3" separately

@@ -23,7 +23,7 @@
 										<table style="width:100%">
 											<tbody>
 												<tr>
-													<td colspan="2">AS OF <span id="spanAsPer"></span></td>
+													<td colspan="2">LATEST UPDATE <span id="spanAsPer"></span></td>
 												</tr>
 												<tr>
 													<td style="background-color: #B666D2">FOR REPAIR</td>
@@ -70,78 +70,187 @@
 								</div>
 								<div class="col-sm-1"></div>
 								<div class="col-sm-8 col-xs-12">
-									<div>
-										<div class="table-responsive" id="tableDashboard">
-											<table class="table" style="width: 100%">
-												<tbody>
-													<tr>
-														<td colspan="7">
-															<strong>
-																LATEST UPDATE 
-																<span id="spanDisplayPriorityDatetime"></span>
-															</strong>
-														</td>
-													</tr>
-													<tr>
-														<td style="width: 10px"><strong>PRIORITY</strong></td>
-														<td><strong>MOLD CTRL</strong></td>
-														<td><strong>PART CODE</strong></td>
-														<td><strong>PART NAME</strong></td>
-														<td><strong>TOOL</strong></td>
-														<td><strong>DATE REQUEST</strong></td>
-														<td><strong>LOCATION</strong></td>
-													</tr>
-													<tr>
-														<td style="width: 10px">1</td>
-														<td id="tdTop1"></td>
-														<td class="tdPartCode"></td>
-														<td class="tdPartName"></td>
-														<td class="tdTool"></td>
-														<td class="tdDateRequest"></td>
-														<td class="tdLocation"></td>
-													</tr>
-													<tr>
-														<td style="width: 10px">2</td>
-														<td id="tdTop2"></td>
-														<td class="tdPartCode"></td>
-														<td class="tdPartName"></td>
-														<td class="tdTool"></td>
-														<td class="tdDateRequest"></td>
-														<td class="tdLocation"></td>
-													</tr>
-													<tr>
-														<td style="width: 10px">3</td>
-														<td id="tdTop3"></td>
-														<td class="tdPartCode"></td>
-														<td class="tdPartName"></td>
-														<td class="tdTool"></td>
-														<td class="tdDateRequest"></td>
-														<td class="tdLocation"></td>
-													</tr>
-													<tr>
-														<td style="width: 10px">4</td>
-														<td id="tdTop4"></td>
-														<td class="tdPartCode"></td>
-														<td class="tdPartName"></td>
-														<td class="tdTool"></td>
-														<td class="tdDateRequest"></td>
-														<td class="tdLocation"></td>
-													</tr>
-													<tr>
-														<td style="width: 10px">5</td>
-														<td id="tdTop5"></td>
-														<td class="tdPartCode"></td>
-														<td class="tdPartName"></td>
-														<td class="tdTool"></td>
-														<td class="tdDateRequest"></td>
-														<td class="tdLocation"></td>
-													</tr>
-												</tbody>
-											</table>
+									<style>
+										/* PARA MATANGGAL YUNG SHADOW SA CAROUSEL */
+										.carousel-control.left, .carousel-control.right {
+											background-image:none !important;
+											filter:none !important;
+										}
+									</style>
+									<div id="myCarousel" class="carousel slide" data-ride="carousel">
+										<!-- Indicators -->
+										<ol class="carousel-indicators">
+											<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+											<li data-target="#myCarousel" data-slide-to="1"></li>
+											<li data-target="#myCarousel" data-slide-to="2"></li>
+										</ol>
+
+										<!-- Wrapper for slides -->
+										<div class="carousel-inner">
+											<div class="item active">
+												<div>
+													<div class="table-responsive" id="tablePriorityRepair">
+														<table class="table" style="width: 100%">
+															<tbody>
+																<tr>
+																	<td colspan="7">
+																		<strong>
+																			<span>REPAIR</span> PRIORITY LATEST UPDATE 
+																			<span id="spanDisplayPriorityDatetime"></span>
+																		</strong>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="width: 10px"><strong>PRIORITY</strong></td>
+																	<td><strong>MOLD CTRL</strong></td>
+																	<td><strong>PART CODE</strong></td>
+																	<td><strong>PART NAME</strong></td>
+																	<td><strong>TOOL</strong></td>
+																	<td><strong>DATE REQUEST</strong></td>
+																	<td><strong>LOCATION</strong></td>
+																</tr>
+																<tr>
+																	<td style="width: 10px">1</td>
+																	<td id="tdTop1"></td>
+																	<td class="tdPartCode"></td>
+																	<td class="tdPartName"></td>
+																	<td class="tdTool"></td>
+																	<td class="tdDateRequest"></td>
+																	<td class="tdLocation"></td>
+																</tr>
+																<tr>
+																	<td style="width: 10px">2</td>
+																	<td id="tdTop2"></td>
+																	<td class="tdPartCode"></td>
+																	<td class="tdPartName"></td>
+																	<td class="tdTool"></td>
+																	<td class="tdDateRequest"></td>
+																	<td class="tdLocation"></td>
+																</tr>
+																<tr>
+																	<td style="width: 10px">3</td>
+																	<td id="tdTop3"></td>
+																	<td class="tdPartCode"></td>
+																	<td class="tdPartName"></td>
+																	<td class="tdTool"></td>
+																	<td class="tdDateRequest"></td>
+																	<td class="tdLocation"></td>
+																</tr>
+																<tr>
+																	<td style="width: 10px">4</td>
+																	<td id="tdTop4"></td>
+																	<td class="tdPartCode"></td>
+																	<td class="tdPartName"></td>
+																	<td class="tdTool"></td>
+																	<td class="tdDateRequest"></td>
+																	<td class="tdLocation"></td>
+																</tr>
+																<tr>
+																	<td style="width: 10px">5</td>
+																	<td id="tdTop5"></td>
+																	<td class="tdPartCode"></td>
+																	<td class="tdPartName"></td>
+																	<td class="tdTool"></td>
+																	<td class="tdDateRequest"></td>
+																	<td class="tdLocation"></td>
+																</tr>
+															</tbody>
+														</table>
+														
+													</div>
+												</div>
+											</div>
+
+											<div class="item">
+												<div>
+													<div class="table-responsive" id="tablePriorityPM">
+														<table class="table" style="width: 100%">
+															<tbody>
+																<tr>
+																	<td colspan="7">
+																		<strong>
+																			<span>PM</span> PRIORITY LATEST UPDATE 
+																			<span id="spanDisplayPriorityDatetime"></span>
+																		</strong>
+																	</td>
+																</tr>
+																<tr>
+																	<td style="width: 10px"><strong>PRIORITY</strong></td>
+																	<td><strong>MOLD CTRL</strong></td>
+																	<td><strong>PART CODE</strong></td>
+																	<td><strong>PART NAME</strong></td>
+																	<td><strong>TOOL</strong></td>
+																	<td><strong>DATE REQUEST</strong></td>
+																	<td><strong>LOCATION</strong></td>
+																</tr>
+																<tr>
+																	<td style="width: 10px">1</td>
+																	<td id="tdTop1"></td>
+																	<td class="tdPartCode"></td>
+																	<td class="tdPartName"></td>
+																	<td class="tdTool"></td>
+																	<td class="tdDateRequest"></td>
+																	<td class="tdLocation"></td>
+																</tr>
+																<tr>
+																	<td style="width: 10px">2</td>
+																	<td id="tdTop2"></td>
+																	<td class="tdPartCode"></td>
+																	<td class="tdPartName"></td>
+																	<td class="tdTool"></td>
+																	<td class="tdDateRequest"></td>
+																	<td class="tdLocation"></td>
+																</tr>
+																<tr>
+																	<td style="width: 10px">3</td>
+																	<td id="tdTop3"></td>
+																	<td class="tdPartCode"></td>
+																	<td class="tdPartName"></td>
+																	<td class="tdTool"></td>
+																	<td class="tdDateRequest"></td>
+																	<td class="tdLocation"></td>
+																</tr>
+																<tr>
+																	<td style="width: 10px">4</td>
+																	<td id="tdTop4"></td>
+																	<td class="tdPartCode"></td>
+																	<td class="tdPartName"></td>
+																	<td class="tdTool"></td>
+																	<td class="tdDateRequest"></td>
+																	<td class="tdLocation"></td>
+																</tr>
+																<tr>
+																	<td style="width: 10px">5</td>
+																	<td id="tdTop5"></td>
+																	<td class="tdPartCode"></td>
+																	<td class="tdPartName"></td>
+																	<td class="tdTool"></td>
+																	<td class="tdDateRequest"></td>
+																	<td class="tdLocation"></td>
+																</tr>
+															</tbody>
+														</table>
+														
+													</div>
+												</div>
+											</div>
 											
 										</div>
+
+										<!-- Left and right controls -->
+										<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+											<span class="glyphicon glyphicon-chevron-left"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#myCarousel" data-slide="next">
+											<span class="glyphicon glyphicon-chevron-right"></span>
+											<span class="sr-only">Next</span>
+										</a>
 									</div>
-									<div id="table1"></div>
+
+									
+									
+									<!-- <div id="table1"></div> -->
 									
 								</div>
 								<!-- <div class="col-sm-1">

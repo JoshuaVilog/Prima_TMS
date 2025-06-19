@@ -1,5 +1,5 @@
 
-$("#menuPriorityRepair").addClass("active");
+$("#menuPriorityPM").addClass("active");
 
 displayRecent();
 
@@ -46,7 +46,7 @@ $("#tbody-priority").on("click", ".btnRemovePriority", function(){
 function displayRecent(){
 
     $.ajax({
-        url: "/"+rootFolder+'/getRecords/priority_masterlist.php', // Replace with your server-side script URL
+        url: "/"+rootFolder+'/getRecords/priority_pm_masterlist.php', // Replace with your server-side script URL
         type: 'POST',
         dataType: 'json',
         success: function(list) {
@@ -66,7 +66,6 @@ function displayRecent(){
             alert('Error fetching data from the database.');
         }
     });
-
 }
 
 displayPriority()
@@ -74,7 +73,7 @@ displayPriority()
 function displayPriority(){
 
     $.ajax({
-        url: "/"+rootFolder+'/getRecords/getLastPriority.php', // Replace with your server-side script URL
+        url: "/"+rootFolder+'/getRecords/getLastPriorityPM.php', // Replace with your server-side script URL
         type: 'POST',
         dataType: 'json',
         success: function(data) {
@@ -159,62 +158,12 @@ function displayPriority(){
                 container3.html(options3);
                 container4.html(options4);
                 container5.html(options5);
-
-                /* let options2 = '<option value="">-Select-</option>';
-                for(let index = 0; index < list.length; index++){
-                    let moldCtrl = list[index].moldCtrl;
-                    let moldPartCode = list[index].moldPartCode;
-                    let moldPartName = list[index].moldPartName;
-
-                    let selected = (selected2 == moldCtrl)? "selected":"";
-
-                    options2 += '<option value="'+ moldCtrl +'" '+selected+'>'+ moldCtrl +' | '+ moldPartCode+' | '+ moldPartName+'</option>';
-                }
-                container2.html(options2);
-
-                let options3 = '<option value="">-Select-</option>';
-                for(let index = 0; index < list.length; index++){
-                    let moldCtrl = list[index].moldCtrl;
-                    let moldPartCode = list[index].moldPartCode;
-                    let moldPartName = list[index].moldPartName;
-
-                    let selected = (selected3 == moldCtrl)? "selected":"";
-
-                    options3 += '<option value="'+ moldCtrl +'" '+selected+'>'+ moldCtrl +' | '+ moldPartCode+' | '+ moldPartName+'</option>';
-                }
-                container3.html(options3);
-
-                let options4 = '<option value="">-Select-</option>';
-                for(let index = 0; index < list.length; index++){
-                    let moldCtrl = list[index].moldCtrl;
-                    let moldPartCode = list[index].moldPartCode;
-                    let moldPartName = list[index].moldPartName;
-
-                    let selected = (selected4 == moldCtrl)? "selected":"";
-
-                    options4 += '<option value="'+ moldCtrl +'" '+selected+'>'+ moldCtrl +' | '+ moldPartCode+' | '+ moldPartName+'</option>';
-                }
-                container4.html(options4);
-
-                let options5 = '<option value="">-Select-</option>';
-                for(let index = 0; index < list.length; index++){
-                    let moldCtrl = list[index].moldCtrl;
-                    let moldPartCode = list[index].moldPartCode;
-                    let moldPartName = list[index].moldPartName;
-
-                    let selected = (selected5 == moldCtrl)? "selected":"";
-
-                    options5 += '<option value="'+ moldCtrl +'" '+selected+'>'+ moldCtrl +' | '+ moldPartCode+' | '+ moldPartName+'</option>';
-                }
-                container5.html(options5); */
                 
                 $('#selectMoldCtrl1, #selectMoldCtrl2, #selectMoldCtrl3, #selectMoldCtrl4, #selectMoldCtrl5').select2({
                     minimumInputLength: 0, // Set to 0 to always show the search bar
                     allowClear: true, 
                     placeholder: 'Select Mold'
                 });
-                
-
             });
            
         },

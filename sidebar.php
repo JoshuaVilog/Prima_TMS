@@ -80,10 +80,17 @@
             </a>
             <b class="arrow"></b>
         </li>
-        <li class="" id="menuPriority">
+        <li class="" id="menuPriorityRepair">
             <a href="/<?php echo $rootFolder; ?>/priority/index.php">
                 <i class="menu-icon fa fa-folder"></i>
-                <span class="menu-text">Priority</span>
+                <span class="menu-text">Repair Priority</span>
+            </a>
+            <b class="arrow"></b>
+        </li>
+        <li class="" id="menuPriorityPM">
+            <a href="/<?php echo $rootFolder; ?>/priorityPM/index.php">
+                <i class="menu-icon fa fa-folder"></i>
+                <span class="menu-text">PM Priority</span>
             </a>
             <b class="arrow"></b>
         </li>
