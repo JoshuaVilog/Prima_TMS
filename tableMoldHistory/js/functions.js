@@ -1,0 +1,2 @@
+
+$("#menuMoldHistory").addClass("active");
