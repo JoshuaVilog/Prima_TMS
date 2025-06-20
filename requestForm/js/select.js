@@ -7,7 +7,7 @@ $("#selectLocation").html(populateLocation())
 $("#selectMoldCtrl").html(populateSelectMoldCtrl()) 
 
 setTimeout(() => {
-    $('#selectMoldCtrl').select2({
+    $('#selectMoldCtrl, #selectDefect').select2({
         minimumInputLength: 0, // Set to 0 to always show the search bar
         allowClear: true, 
         placeholder: 'Select Mold',
@@ -124,7 +124,7 @@ $("#btnAddNewDefect").click(function(){
     $("#btnCancelAddDefect").show();
 
     $("#txtAddNewDefect").show();
-    $("#selectDefect").hide();
+    $("#selectDefectContainer").hide();
     $("#selectDefect").val("");
     $("#txtAddNewDefect").val("");
 
@@ -138,7 +138,7 @@ $("#btnCancelAddDefect").click(function(){
     $("#btnCancelAddDefect").hide();
 
     $("#txtAddNewDefect").hide();
-    $("#selectDefect").show();
+    $("#selectDefectContainer").show();
 
 })
 $("#inputGroupDefect").on("input", "#txtAddNewDefect", function(){
@@ -166,15 +166,22 @@ $("#btnSaveNewDefect").click(function(){
     
                 setTimeout(() => {
                     $("#selectDefect").html(populateDefect(response));
-                    
-                    // $("#selectDefect").val(response);
+
+                    setTimeout(() => {
+                        $('#selectDefect').select2({
+                            minimumInputLength: 0, // Set to 0 to always show the search bar
+                            allowClear: true, 
+                            placeholder: 'Select Mold',
+                            
+                        });
+                    }, 500);
     
                     $("#btnAddNewDefect").show();
                     $("#btnSaveNewDefect").hide();
                     $("#btnCancelAddDefect").hide();
     
                     $("#txtAddNewDefect").hide();
-                    $("#selectDefect").show();
+                    $("#selectDefectContainer").show();
                     $("#btnSaveNewDefect").prop("disabled", false);
                 }, 500);
     

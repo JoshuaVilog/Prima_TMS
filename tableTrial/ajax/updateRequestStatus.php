@@ -70,6 +70,7 @@ try {
             `TRIAL_REMARKS` = '$remarks',
             `MACHINE_NO` = '$machineNo',
             `RESULT` = '2',
+            `RESULT_2` = 1,
             `UPDATED_BY` = '$userCode',
             `UPDATED_IP` = '$getIP'
         WHERE
@@ -86,6 +87,7 @@ try {
             `TRIAL_PIC` = '$userCode',
             `STATUS` = '$status',
             `RESULT` = '3',
+            `RESULT_2` = 1,
             `UPDATED_BY` = '$userCode',
             `UPDATED_IP` = '$getIP'
         WHERE

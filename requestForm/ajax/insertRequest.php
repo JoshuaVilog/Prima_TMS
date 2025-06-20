@@ -41,7 +41,7 @@ try {
     // $count = $fetch['COUNT'] + 1;
 
     // $code = $temporaryCode.formatNumber($count);
-    $sql = "SELECT RID FROM `2_request_masterlist` WHERE PR_NO = '$pr'";
+    $sql = "SELECT RID FROM `2_request_masterlist` WHERE PR_NO = '$pr' AND RESULT_2 = 0";
     $result = mysqli_query($conn, $sql);
 
     if(mysqli_num_rows($result) == 0){

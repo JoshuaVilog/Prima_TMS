@@ -305,7 +305,6 @@ function displayHistoryResult(cell, formatterParams, onRendered){
         return result.b;
     }
 }
-
 // DISPLAY PRIORITY
 
 function displayPriority(){

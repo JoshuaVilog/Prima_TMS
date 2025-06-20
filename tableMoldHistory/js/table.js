@@ -10,7 +10,7 @@ var table;
 async function fetchDataAndInitializeTable() {
 
     $.ajax({
-        url: "/"+rootFolder+'/getRecords/request_masterlist.php', // Replace with your server-side script URL
+        url: "/"+rootFolder+'/getRecords/mold_history.php', // Replace with your server-side script URL
         type: 'POST',
         dataType: 'json',
         success: function(list) {

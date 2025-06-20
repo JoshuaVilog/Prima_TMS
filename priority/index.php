@@ -37,7 +37,7 @@
                                                 <table class="table table-bordered" id="tableForm">
                                                     <thead>
                                                         <tr>
-                                                            <th class="center">TOP</th>
+                                                            <th class="center" style="">TOP</th>
                                                             <th class="center">MOLD CTRL</th>
                                                             <th class="center">ITEM CODE</th>
                                                             <th class="center">ITEM NAME</th>

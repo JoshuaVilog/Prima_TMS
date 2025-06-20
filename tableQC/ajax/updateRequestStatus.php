@@ -34,6 +34,7 @@ try {
             `QC_REMARKS` = '$remarks',
             `STATUS` = '$status',
             `RESULT` = '1',
+            `RESULT_2` = '1',
             `UPDATED_BY` = '$userCode',
             `UPDATED_IP` = '$getIP'
         WHERE
@@ -50,6 +51,7 @@ try {
             `QC_PIC` = '$userCode',
             `QC_REMARKS` = '$remarks',
             `RESULT` = '2',
+            `RESULT_2` = '1',
             `UPDATED_BY` = '$userCode',
             `UPDATED_IP` = '$getIP'
         WHERE

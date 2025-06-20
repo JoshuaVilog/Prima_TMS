@@ -2,7 +2,28 @@
 <html lang="en">
 	
     <?php include "../header.php";?>
-
+    <style>
+        /* SELECT 2 */
+        .select2-container .select2-selection--single {
+            height: 40px; /* Adjust to your desired height */
+            font-size: 16px; /* Adjust text size */
+        }
+        /* Align the selected text vertically in the larger container */
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            line-height: 40px; /* Same as the container height */
+        }
+        .select2-container .select2-results {
+            max-height: 300px; /* Set the desired height */
+            overflow-y: auto; /* Add scroll if content overflows */
+        }
+        .select2-container .select2-results__option {
+            height: 40px; /* Adjust this value as needed */
+            line-height: 40px; /* Align the text vertically */
+        }
+        .select2-container .select2-search--dropdown .select2-search__field {
+            height: 40px; /* Adjust this value as needed */
+        }
+    </style>
 	<body class="no-skin">
 		<?php include "../navbar.php";?>
 
@@ -153,7 +174,9 @@
                                                 </label>
                                                 <!-- <select id="selectDefect" class="form-control" disabled></select> -->
                                                 <div class="input-group input-group-lg" id="inputGroupDefect">
-                                                    <select id="selectDefect" class="form-control" ></select>
+                                                    <div id="selectDefectContainer">
+                                                        <select id="selectDefect" class="form-control" ></select>
+                                                    </div>
                                                     <input type="text" id="txtAddNewDefect" class="form-control" style="display:none">
 
                                                     <span class="input-group-btn">

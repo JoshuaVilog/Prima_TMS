@@ -46,7 +46,7 @@ $sql = "SELECT
         `2_request_masterlist`
     INNER JOIN mold_masterlist ON 2_request_masterlist.MOLD_CTRL = mold_masterlist.MOLD_CTRL
     WHERE
-        CONCAT(RESULT_2,COALESCE(2_request_masterlist.DELETED_AT, '')) = '0'
+        CONCAT(COALESCE(2_request_masterlist.DELETED_AT, '')) = ''
     ORDER BY 2_request_masterlist.CREATED_AT DESC, GROUP_DATE DESC";
 $result = $conn->query($sql);
 

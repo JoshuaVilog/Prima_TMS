@@ -22,14 +22,14 @@
 
             <b class="arrow"></b>
         </li> -->
-        <li class="" id="menuDashboard3">
+        <!-- <li class="" id="menuDashboard3">
             <a href="/<?php echo $rootFolder; ?>/dashboard3/index.php">
                 <i class="menu-icon fa fa-tachometer"></i>
                 <span class="menu-text"> Dashboard 2</span>
             </a>
 
             <b class="arrow"></b>
-        </li>
+        </li> -->
         <li class="" id="menuMoldList">
             <a href="/<?php echo $rootFolder; ?>/tableMoldMasterlist/index.php">
                 <i class="menu-icon fa fa-folder"></i>
