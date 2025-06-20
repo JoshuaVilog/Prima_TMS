@@ -3,7 +3,7 @@ include "connection.php";
 
 $moldCode = $_POST['moldCode'];
 
-$sql = "SELECT REQUEST_DATE, LOCATION FROM `2_request_masterlist` WHERE MOLD_CTRL = 'PTTM14-003' ORDER BY CREATED_AT DESC LIMIT 1";
+$sql = "SELECT REQUEST_DATE, LOCATION FROM `2_request_masterlist` WHERE MOLD_CTRL = '$moldCode' ORDER BY CREATED_AT DESC LIMIT 1";
 $result = $conn->query($sql);
 
 // Convert result set to JSON
