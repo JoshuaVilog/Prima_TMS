@@ -1,7 +1,7 @@
 <?php
 include "connection.php";
 
-$sql = "SELECT `RID`, `MOLD_CTRL`, `ITEM_CODE`, `ITEM_NAME`, `CUSTOMER`, `MODEL`, `MAKER`, `CATEGORY`, `MOLD_LOCATION`, `MARK`, `MOLD_STATUS`, `COLOR_CODE`, `GUARANTEE`, `CAVITY`, `TRANSFER_DATE`, `APPROVAL_DATE`, `MOLD_CONDITION`, `CREATED_AT` FROM `mold_masterlist` WHERE COALESCE(DELETED_AT, '') = '' ORDER BY RID DESC";
+$sql = "SELECT `RID`, `MOLD_CTRL`, `ITEM_CODE`, `ITEM_NAME`, `CUSTOMER`, `MODEL`, `MAKER`, `CATEGORY`, `MOLD_LOCATION`, `MARK`, `MOLD_STATUS`, `COLOR_CODE`, `GUARANTEE`, `CAVITY`, `TRANSFER_DATE`, `APPROVAL_DATE`, `MOLD_CONDITION`, `CREATED_AT`, `CREATED_BY` FROM `mold_masterlist` WHERE COALESCE(DELETED_AT, '') = '' ORDER BY RID DESC";
 $result = $conn->query($sql);
 
 // Convert result set to JSON
@@ -27,6 +27,7 @@ if ($result->num_rows > 0) {
             "p"=>$row['APPROVAL_DATE'],
             "q"=>$row['MOLD_CONDITION'],
             "r"=>$row['CREATED_AT'],
+            "s"=>$row['CREATED_BY'],
         );
     }
 }

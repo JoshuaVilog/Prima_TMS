@@ -20,13 +20,20 @@ function fetchDataAndInitializeTable() {
         paginationSizeSelector: [25, 50, 100], // Page size options
         page: 1, // Initial page number
         columns: [
+            {title: "NO.", formatter: "rownum", formatter: function(cell) {
+                const row = cell.getRow();
+                const table = row.getTable();
+                const page = table.getPage(); // current page number
+                const size = table.getPageSize(); // rows per page
+                const rowIndex = row.getPosition(true); // position in data
+                return ((page - 1) * size) + row.getPosition(true);
+            },},
             {title: "MOLD CONTROL", field: "b", headerFilter: "input"},
             {title: "ITEM CODE", field: "c", headerFilter: "input"},
             {title: "ITEM NAME", field: "d", headerFilter: "input"},
             {title: "CUSTOMER", field: "e", headerFilter: "input"},
             {title: "MODEL", field: "f", headerFilter: "input"},
             {title: "MAKER", field: "g", headerFilter: "input"},
-            {title: "DATE OF REGISTRATION", field: "r", headerFilter: "input"},
             {title: "CATEGORY", field: "h", headerFilter: "input"},
             {title: "MOLD LOCATION", field: "i", headerFilter: "input"},
             {title: "MARK", field: "j", headerFilter: "input"},
@@ -37,6 +44,10 @@ function fetchDataAndInitializeTable() {
             {title: "TRANSFER DATE", field: "o", headerFilter: "input"},
             {title: "APPROVAL DATE", field: "p", headerFilter: "input"},
             {title: "MOLD CONDITION", field: "q", headerFilter: "input"},
+            {title: "CREATED AT", field: "r", headerFilter: "input", frozen: true},
+            {title: "CREATED BY", field: "s", frozen: true, formatter: function(cell){
+                return setUserFullName(cell.getValue());
+            }},
             {title: "Action", formatter: formatterAction, frozen:true},
         ],
         downloadConfig: {
