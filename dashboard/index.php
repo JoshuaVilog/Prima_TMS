@@ -102,7 +102,7 @@
 																</tr>
 																<tr>
 																	<td style="width: 10px"><strong>PRIORITY</strong></td>
-																	<td><strong>MOLD CTRL</strong></td>
+																	<td><strong>CTRL NUMBER</strong></td>
 																	<td><strong>PART CODE</strong></td>
 																	<td><strong>PART NAME</strong></td>
 																	<td><strong>TOOL</strong></td>
@@ -176,7 +176,7 @@
 																</tr>
 																<tr>
 																	<td style="width: 10px"><strong>PRIORITY</strong></td>
-																	<td><strong>MOLD CTRL</strong></td>
+																	<td><strong>CTRL NUMBER</strong></td>
 																	<td><strong>PART CODE</strong></td>
 																	<td><strong>PART NAME</strong></td>
 																	<td><strong>TOOL</strong></td>
