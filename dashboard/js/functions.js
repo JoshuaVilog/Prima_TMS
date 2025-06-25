@@ -316,38 +316,38 @@ function displayPriority(){
         success: function(data) {
             // console.log(data);
            
-            $("#tablePriorityRepair #tdTop1").text(data.b);
-            $("#tablePriorityRepair #tdTop2").text(data.c);
-            $("#tablePriorityRepair #tdTop3").text(data.d);
-            $("#tablePriorityRepair #tdTop4").text(data.e);
-            $("#tablePriorityRepair #tdTop5").text(data.f);
+            // $("#tablePriorityRepair #tdTop1").text(data.b);
+            // $("#tablePriorityRepair #tdTop2").text(data.c);
+            // $("#tablePriorityRepair #tdTop3").text(data.d);
+            // $("#tablePriorityRepair #tdTop4").text(data.e);
+            // $("#tablePriorityRepair #tdTop5").text(data.f);
             $("#tablePriorityRepair #spanDisplayPriorityDatetime").text(data.g);
 
             $("#tablePriorityRepair #tdTop1").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.b));
             $("#tablePriorityRepair #tdTop1").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.b));
             $("#tablePriorityRepair #tdTop1").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.b));
-            displayDateRequestAndLocation(data.b, $("#tablePriorityRepair #tdTop1").closest("tr").find(".tdDateRequest"), $("#tablePriorityRepair #tdTop1").closest("tr").find(".tdLocation"));
+            displayDateRequestAndLocation(data.b, $("#tablePriorityRepair #tdTop1").closest("tr").find(".tdDateRequest"), $("#tablePriorityRepair #tdTop1").closest("tr").find(".tdLocation"), $("#tablePriorityRepair #tdTop1"));
 
 
             $("#tablePriorityRepair #tdTop2").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.c));
             $("#tablePriorityRepair #tdTop2").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.c));
             $("#tablePriorityRepair #tdTop2").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.c));
-            displayDateRequestAndLocation(data.b, $(" #tablePriorityRepair #tdTop2").closest("tr").find(".tdDateRequest"), $("#tablePriorityRepair #tdTop2").closest("tr").find(".tdLocation"));
+            displayDateRequestAndLocation(data.c, $(" #tablePriorityRepair #tdTop2").closest("tr").find(".tdDateRequest"), $("#tablePriorityRepair #tdTop2").closest("tr").find(".tdLocation"), $("#tablePriorityRepair #tdTop2"));
 
             $("#tablePriorityRepair #tdTop3").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.d));
             $("#tablePriorityRepair #tdTop3").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.d));
             $("#tablePriorityRepair #tdTop3").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.d));
-            displayDateRequestAndLocation(data.b, $("#tablePriorityRepair #tdTop3").closest("tr").find(".tdDateRequest"), $("#tablePriorityRepair #tdTop3").closest("tr").find(".tdLocation"));
+            displayDateRequestAndLocation(data.d, $("#tablePriorityRepair #tdTop3").closest("tr").find(".tdDateRequest"), $("#tablePriorityRepair #tdTop3").closest("tr").find(".tdLocation"), $("#tablePriorityRepair #tdTop3"));
 
             $("#tablePriorityRepair #tdTop4").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.e));
             $("#tablePriorityRepair #tdTop4").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.e));
             $("#tablePriorityRepair #tdTop4").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.e));
-            displayDateRequestAndLocation(data.b, $("#tablePriorityRepair #tdTop4").closest("tr").find(".tdDateRequest"), $("#tablePriorityRepair #tdTop4").closest("tr").find(".tdLocation"));
+            displayDateRequestAndLocation(data.e, $("#tablePriorityRepair #tdTop4").closest("tr").find(".tdDateRequest"), $("#tablePriorityRepair #tdTop4").closest("tr").find(".tdLocation"), $("#tablePriorityRepair #tdTop4"));
 
             $("#tablePriorityRepair #tdTop5").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.f));
             $("#tablePriorityRepair #tdTop5").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.f));
             $("#tablePriorityRepair #tdTop5").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.f));
-            displayDateRequestAndLocation(data.b, $("#tablePriorityRepair #tdTop5").closest("tr").find(".tdDateRequest"), $("#tablePriorityRepair #tdTop5").closest("tr").find(".tdLocation"));
+            displayDateRequestAndLocation(data.f, $("#tablePriorityRepair #tdTop5").closest("tr").find(".tdDateRequest"), $("#tablePriorityRepair #tdTop5").closest("tr").find(".tdLocation"), $("#tablePriorityRepair #tdTop5"));
             
 
             
@@ -364,38 +364,38 @@ function displayPriority(){
         success: function(data) {
             // console.log(data);
            
-            $("#tablePriorityPM #tdTop1").text(data.b);
-            $("#tablePriorityPM #tdTop2").text(data.c);
-            $("#tablePriorityPM #tdTop3").text(data.d);
-            $("#tablePriorityPM #tdTop4").text(data.e);
-            $("#tablePriorityPM #tdTop5").text(data.f);
+            // $("#tablePriorityPM #tdTop1").text(data.b);
+            // $("#tablePriorityPM #tdTop2").text(data.c);
+            // $("#tablePriorityPM #tdTop3").text(data.d);
+            // $("#tablePriorityPM #tdTop4").text(data.e);
+            // $("#tablePriorityPM #tdTop5").text(data.f);
             $("#tablePriorityPM #spanDisplayPriorityDatetime").text(data.g);
 
             $("#tablePriorityPM #tdTop1").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.b));
             $("#tablePriorityPM #tdTop1").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.b));
             $("#tablePriorityPM #tdTop1").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.b));
-            displayDateRequestAndLocation(data.b, $("#tablePriorityPM #tdTop1").closest("tr").find(".tdDateRequest"), $("#tablePriorityPM #tdTop1").closest("tr").find(".tdLocation"));
+            displayDateRequestAndLocation(data.b, $("#tablePriorityPM #tdTop1").closest("tr").find(".tdDateRequest"), $("#tablePriorityPM #tdTop1").closest("tr").find(".tdLocation"), $("#tablePriorityPM #tdTop1"));
 
 
             $("#tablePriorityPM #tdTop2").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.c));
             $("#tablePriorityPM #tdTop2").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.c));
             $("#tablePriorityPM #tdTop2").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.c));
-            displayDateRequestAndLocation(data.b, $("#tablePriorityPM #tdTop2").closest("tr").find(".tdDateRequest"), $("#tablePriorityPM #tdTop2").closest("tr").find(".tdLocation"));
+            displayDateRequestAndLocation(data.c, $("#tablePriorityPM #tdTop2").closest("tr").find(".tdDateRequest"), $("#tablePriorityPM #tdTop2").closest("tr").find(".tdLocation"), $("#tablePriorityPM #tdTop2"));
 
             $("#tablePriorityPM #tdTop3").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.d));
             $("#tablePriorityPM #tdTop3").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.d));
             $("#tablePriorityPM #tdTop3").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.d));
-            displayDateRequestAndLocation(data.b, $("#tablePriorityPM #tdTop3").closest("tr").find(".tdDateRequest"), $("#tablePriorityPM #tdTop3").closest("tr").find(".tdLocation"));
+            displayDateRequestAndLocation(data.d, $("#tablePriorityPM #tdTop3").closest("tr").find(".tdDateRequest"), $("#tablePriorityPM #tdTop3").closest("tr").find(".tdLocation"), $("#tablePriorityPM #tdTop3"));
 
             $("#tablePriorityPM #tdTop4").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.e));
             $("#tablePriorityPM #tdTop4").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.e));
             $("#tablePriorityPM #tdTop4").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.e));
-            displayDateRequestAndLocation(data.b, $("#tablePriorityPM #tdTop4").closest("tr").find(".tdDateRequest"), $("#tablePriorityPM #tdTop4").closest("tr").find(".tdLocation"));
+            displayDateRequestAndLocation(data.e, $("#tablePriorityPM #tdTop4").closest("tr").find(".tdDateRequest"), $("#tablePriorityPM #tdTop4").closest("tr").find(".tdLocation"), $("#tablePriorityPM #tdTop4"));
 
             $("#tablePriorityPM #tdTop5").closest("tr").find(".tdPartCode").text(getDisplayMoldPartNo(data.f));
             $("#tablePriorityPM #tdTop5").closest("tr").find(".tdPartName").text(getDisplayMoldPartName(data.f));
             $("#tablePriorityPM #tdTop5").closest("tr").find(".tdTool").text(getDisplayMoldTool(data.f));
-            displayDateRequestAndLocation(data.b, $("#tablePriorityPM #tdTop5").closest("tr").find(".tdDateRequest"), $("#tablePriorityPM #tdTop5").closest("tr").find(".tdLocation"));
+            displayDateRequestAndLocation(data.f, $("#tablePriorityPM #tdTop5").closest("tr").find(".tdDateRequest"), $("#tablePriorityPM #tdTop5").closest("tr").find(".tdLocation"), $("#tablePriorityPM #tdTop5"));
             
 
             
@@ -406,7 +406,7 @@ function displayPriority(){
     });
 }
 
-function displayDateRequestAndLocation(moldCode, elementRequestDate, elementLocation){
+function displayDateRequestAndLocation(moldCode, elementRequestDate, elementLocation, elementPR){
 
     $.ajax({
         url: "/"+rootFolder+'/getRecords/getLastDateAndLocationByMoldCode.php', // Replace with your server-side script URL
@@ -416,9 +416,10 @@ function displayDateRequestAndLocation(moldCode, elementRequestDate, elementLoca
         },
         dataType: 'json',
         success: function(data) {
-            console.log(data);
+            // console.log(data);
             elementRequestDate.text(data.REQUEST_DATE);
             elementLocation.text(setLocation(data.LOCATION));
+            elementPR.text(data.PR_NO);
 
         },
         error: function(error) {
