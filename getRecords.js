@@ -908,12 +908,18 @@ function setLocation(id){
     }
 }
 
-function getCurrentDate(){
+function getCurrentDate(num){
     let currentDate = new Date();
 
     let year = currentDate.getFullYear();
     let month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-indexed
-    let day = currentDate.getDate().toString().padStart(2, '0');
+    let day = 0;
+
+    if(num != undefined){
+        day = (currentDate.getDate() - num).toString().padStart(2, '0');
+    } else {
+        day = currentDate.getDate().toString().padStart(2, '0');
+    }
 
     let formattedDate = `${year}-${month}-${day}`;
     // console.log(formattedDate);  // Outputs something like: 2024-05-29

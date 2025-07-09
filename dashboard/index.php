@@ -18,7 +18,108 @@
 					<div class="page-content">
 						<div id="dashboard2">
 							<div class="row">
-								<div class="col-sm-2 ">
+								<div class="col-sm-4">
+									<div class="row">
+										<div class="col-sm-12">
+											<div id="">
+												<table style="width:100%">
+													<tbody>
+														<tr>
+															<td colspan="5">TREND TODAY</td>
+														</tr>
+														<tr>
+															<td>DATE</td>
+															<td>-</td>
+															<td id="tdCurrentDate-2">0000-00-00</td>
+															<td id="tdCurrentDate-1">0000-00-00</td>
+															<td id="tdCurrentDate">0000-00-00</td>
+														</tr>
+														<tr>
+															<td rowspan="7" style="background-color: #B666D2">REPAIR</td>
+														</tr>
+														<tr>
+															<td>PLAN</td>
+															<td id="tdTrendRepairPlan-2">0</td>
+															<td id="tdTrendRepairPlan-1">0</td>
+															<td id="tdTrendRepairPlanNow">0</td>
+														</tr>
+														<tr>
+															<td>RESULT</td>
+															<td id="tdTrendRepairResult-2">0</td>
+															<td id="tdTrendRepairResult-1">0</td>
+															<td id="tdTrendRepairResultNow">0</td>
+														</tr>
+														<tr>
+															<td>GAP</td>
+															<td id="tdTrendRepairGap-2">0</td>
+															<td id="tdTrendRepairGap-1">0</td>
+															<td id="tdTrendRepairGapNow">0</td>
+														</tr>
+														<tr>
+															<td>%</td>
+															<td id="tdTrendRepairPercent-2">0</td>
+															<td id="tdTrendRepairPercent-1">0</td>
+															<td id="tdTrendRepairPercentNow">0</td>
+														</tr>
+														<tr>
+															<td>PENDING RESULT</td>
+															<td id="tdTrendRepairPendingResult-2">0</td>
+															<td id="tdTrendRepairPendingResult-1">0</td>
+															<td id="tdTrendRepairPendingResultNow">0</td>
+														</tr>
+														<tr>
+															<td>ADVANCE RESULT</td>
+															<td id="tdTrendRepairAdvanceResult-2">0</td>
+															<td id="tdTrendRepairAdvanceResult-1">0</td>
+															<td id="tdTrendRepairAdvanceResultNow">0</td>
+														</tr>
+
+														<tr>
+															<td rowspan="7" style="background-color: #1589FF">PM</td>
+														</tr>
+														<tr>
+															<td>PLAN</td>
+															<td id="tdTrendPMPlan-2">0</td>
+															<td id="tdTrendPMPlan-1">0</td>
+															<td id="tdTrendPMPlanNow">0</td>
+														</tr>
+														<tr>
+															<td>RESULT</td>
+															<td id="tdTrendPMResult-2">0</td>
+															<td id="tdTrendPMResult-1">0</td>
+															<td id="tdTrendPMResultNow">0</td>
+														</tr>
+														<tr>
+															<td>GAP</td>
+															<td id="tdTrendPMGap-2">0</td>
+															<td id="tdTrendPMGap-1">0</td>
+															<td id="tdTrendPMGapNow">0</td>
+														</tr>
+														<tr>
+															<td>%</td>
+															<td id="tdTrendPMPercent-2">0</td>
+															<td id="tdTrendPMPercent-1">0</td>
+															<td id="tdTrendPMPercentNow">0</td>
+														</tr>
+														<tr>
+															<td>PENDING RESULT</td>
+															<td id="tdTrendPMPendingResult-2">0</td>
+															<td id="tdTrendPMPendingResult-1">0</td>
+															<td id="tdTrendPMPendingResultNow">0</td>
+														</tr>
+														<tr>
+															<td>ADVANCE RESULT</td>
+															<td id="tdTrendPMAdvanceResult-2">0</td>
+															<td id="tdTrendPMAdvanceResult-1">0</td>
+															<td id="tdTrendPMAdvanceResultNow">0</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="col-sm-2 ">
 									<div id="table2">
 										<table style="width:100%">
 											<tbody>
@@ -82,60 +183,8 @@
 											</div>
 										</div>
 									</div>
-									<div class="row">
-										<div class="col-sm-12">
-											<div id="">
-												<table style="width:100%">
-													<tbody>
-														<tr>
-															<td colspan="3">TREND TODAY</td>
-														</tr>
-														<tr>
-															<td rowspan="5" style="background-color: #B666D2">REPAIR</td>
-														</tr>
-														<tr>
-															<td>PLAN</td>
-															<td id="tdCountTrendRepairPlan">0</td>
-														</tr>
-														<tr>
-															<td>RESULT</td>
-															<td id="tdCountTrendRepairResult">0</td>
-														</tr>
-														<tr>
-															<td>GAP</td>
-															<td id="tdCountTrendRepairGap">0</td>
-														</tr>
-														<tr>
-															<td>%</td>
-															<td id="tdCountTrendRepairPercent">0</td>
-														</tr>
-														<tr>
-															<td rowspan="5" style="background-color: #1589FF">PM</td>
-														</tr>
-														<tr>
-															<td>PLAN</td>
-															<td id="tdCountTrendPMPlan">0</td>
-														</tr>
-														<tr>
-															<td>RESULT</td>
-															<td id="tdCountTrendPMResult">0</td>
-														</tr>
-														<tr>
-															<td>GAP</td>
-															<td id="tdCountTrendPMGap">0</td>
-														</tr>
-														<tr>
-															<td>%</td>
-															<td id="tdCountTrendPMPercent">0</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-										</div>
-									</div>
-									
 								</div>
-								<div class="col-sm-1"></div>
+								<div class="col-sm-1"></div> -->
 								<div class="col-sm-8 col-xs-12">
 									<style>
 										/* PARA MATANGGAL YUNG SHADOW SA CAROUSEL */

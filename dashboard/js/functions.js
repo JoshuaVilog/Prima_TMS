@@ -60,12 +60,43 @@ function displayTotalDashboard2() {
             // ANG MGA NASA LIST LANG AY 0 RESULT AND NOT MP STATUS AND NOT CANCEL STATUS AND (REPAIR TYPE OR PM TYPE)
             list = list.filter(item => item.z == "0" && item.x != "5" && item.x != "6" && (item.i == "1" || item.i == "3"));
             
-            console.log(list);
+            // console.log(list);
 
-            let trendRepairPlan = 0;
-            let trendRepairResult = 0;
-            let trendPMPlan = 0;
-            let trendPMResult = 0;
+            // CURRENT
+            let trendRepairPlanNow = 0;
+            let trendRepairResultNow = 0;
+            let trendRepairResultPendingNow = 0;
+            let trendRepairResultAdvanceNow = 0;
+
+            // LAST 1 DAY
+            let trendRepairPlan_1 = 0;
+            let trendRepairResult_1 = 0;
+            let trendRepairResultPending_1 = 0;
+            let trendRepairResultAdvance_1 = 0;
+
+            // LAST 2 DAY
+            let trendRepairPlan_2 = 0;
+            let trendRepairResult_2 = 0;
+            let trendRepairResultPending_2 = 0;
+            let trendRepairResultAdvance_2 = 0;
+
+            // CURRENT
+            let trendPMPlanNow = 0;
+            let trendPMResultNow = 0;
+            let trendPMResultPendingNow = 0;
+            let trendPMResultAdvanceNow = 0;
+
+            // LAST 1 DAY
+            let trendPMPlan_1 = 0;
+            let trendPMResult_1 = 0;
+            let trendPMResultPending_1 = 0;
+            let trendPMResultAdvance_1 = 0;
+
+            // LAST 2 DAY
+            let trendPMPlan_2 = 0;
+            let trendPMResult_2 = 0;
+            let trendPMResultPending_2 = 0;
+            let trendPMResultAdvance_2 = 0;
 
             list.forEach(function (row) {
                 row.MOLD_MODEL = getDisplayMoldModel(row.c);
@@ -75,23 +106,6 @@ function displayTotalDashboard2() {
                 row.MOLD_CUSTOMER = getDisplayMoldCustomer(row.c);
 
                 // //ISININGIT KO LANG YUNG CODE NA TO PARA IWAS SA MARAMING LOOP, LOOP DIN NAMAN KASE TO EH
-
-                // TREND
-                if(getCurrentDate() == row.g && row.i == "1"){
-                    trendRepairPlan++;
-                }
-
-                if(getCurrentDate() == row.o && row.i == "1"){
-                    trendRepairResult++;
-                }
-                if(getCurrentDate() == row.g && row.i == "3"){
-                    trendPMPlan++;
-                }
-
-                if(getCurrentDate() == row.o && row.i == "3"){
-                    trendPMResult++;
-                }
-                
                 
                 var selectedStatus = statusList.find(function(value) {
                     return value.a === row.x;
@@ -126,35 +140,187 @@ function displayTotalDashboard2() {
                         // countOverAll++; // COUNTS OVERALL (MEDYO NATAGALAN PA AKO SA PART NA PAGCOCODE NETO)
                     }
                 }
+
+
+                
+                // ===== TREND ===== //
+
+                //CURRENT
+                if(getCurrentDate() == row.g && row.i == "1"){
+                    trendRepairPlanNow++;
+                }
+                if(getCurrentDate() == row.g && getCurrentDate() == row.o && row.i == "1"){
+                    trendRepairResultNow++;
+                }
+                if(getCurrentDate() > row.g && getCurrentDate() == row.o && row.i == "1"){
+                    trendRepairResultPendingNow++;
+                }
+                if(getCurrentDate() < row.g && getCurrentDate() == row.o && row.i == "1"){
+                    trendRepairResultAdvanceNow++;
+                }
+
+                // LAST ONE DAY
+                if(getCurrentDate(1) == row.g && row.i == "1"){
+                    trendRepairPlan_1++;
+                }
+                if(getCurrentDate(1) == row.g && getCurrentDate(1) == row.o && row.i == "1"){
+                    trendRepairResult_1++;
+                }
+                if(getCurrentDate(1) > row.g && getCurrentDate(1) == row.o && row.i == "1"){
+                    trendRepairResultPending_1++;
+                }
+                if(getCurrentDate(1) < row.g && getCurrentDate(1) == row.o && row.i == "1"){
+                    trendRepairResultAdvance_1++;
+                }
+
+                // LAST 2 DAY
+                if(getCurrentDate(2) == row.g && row.i == "1"){
+                    trendRepairPlan_2++;
+                }
+                if(getCurrentDate(2) == row.g && getCurrentDate(2) == row.o && row.i == "1"){
+                    trendRepairResult_2++;
+                }
+                if(getCurrentDate(2) > row.g && getCurrentDate(2) == row.o && row.i == "1"){
+                    trendRepairResultPending_2++;
+                }
+                if(getCurrentDate(2) < row.g && getCurrentDate(2) == row.o && row.i == "1"){
+                    trendRepairResultAdvance_2++;
+                }
+
+                //PM
+                //CURRENT
+                if(getCurrentDate() == row.g && row.i == "3"){
+                    trendPMPlanNow++;
+                }
+                if(getCurrentDate() == row.g && getCurrentDate() == row.o && row.i == "3"){
+                    trendPMResultNow++;
+                }
+                if(getCurrentDate() > row.g && getCurrentDate() == row.o && row.i == "3"){
+                    trendPMResultPendingNow++;
+                }
+                if(getCurrentDate() < row.g && getCurrentDate() == row.o && row.i == "3"){
+                    trendPMResultAdvanceNow++;
+                }
+
+                // LAST ONE DAY
+                if(getCurrentDate(1) == row.g && row.i == "3"){
+                    trendPMPlan_1++;
+                }
+                if(getCurrentDate(1) == row.g && getCurrentDate(1) == row.o && row.i == "3"){
+                    trendPMResult_1++;
+                }
+                if(getCurrentDate(1) > row.g && getCurrentDate(1) == row.o && row.i == "3"){
+                    trendPMResultPending_1++;
+                }
+                if(getCurrentDate(1) < row.g && getCurrentDate(1) == row.o && row.i == "3"){
+                    trendPMResultAdvance_1++;
+                }
+
+                // LAST 2 DAY
+                if(getCurrentDate(2) == row.g && row.i == "3"){
+                    trendPMPlan_2++;
+                }
+                if(getCurrentDate(2) == row.g && getCurrentDate(2) == row.o && row.i == "3"){
+                    trendPMResult_2++;
+                }
+                if(getCurrentDate(2) > row.g && getCurrentDate(2) == row.o && row.i == "3"){
+                    trendPMResultPending_2++;
+                }
+                if(getCurrentDate(2) < row.g && getCurrentDate(2) == row.o && row.i == "3"){
+                    trendPMResultAdvance_2++;
+                }
    
             });
             
-            let trendRepairGap = trendRepairResult - trendRepairPlan;
-            let trendRepairPercent = trendRepairResult / trendRepairPlan * 100;
-            let trendPMGap = trendPMResult - trendPMPlan;
-            let trendPMPercent = trendPMResult / trendPMPlan * 100;
+            
 
 
-            // $("#tdCountAllRM").text(countAllRM);
-            // $("#tdCountAllRepair").text(countAllRepair);
             $("#tdCountForTrial").text(countTrial);
             $("#tdCountQC").text(countQC);
             $("#tdCountMoldRepair").text(countMoldRepair);
             $("#tdCountForPM").text(countForPM);
             $("#tdCountForRepair").text(countForRepair);
             $("#tdCountMP").text(countAllRM);
-            // $("#tdTotalOverAll").text(countOverAll)
             $("#tdTotalOverAll").text(countOverAll);
 
-            $("#tdCountTrendRepairPlan").text(trendRepairPlan);
-            $("#tdCountTrendRepairResult").text(trendRepairResult);
-            $("#tdCountTrendRepairGap").text(trendRepairGap);
-            $("#tdCountTrendRepairPercent").text(trendRepairPercent.toFixed(2) +"%");
+            // DATE
+            $("#tdCurrentDate").text(getCurrentDate());
+            $("#tdCurrentDate-1").text(getCurrentDate(1));
+            $("#tdCurrentDate-2").text(getCurrentDate(2));
 
-            $("#tdCountTrendPMPlan").text(trendPMPlan);
-            $("#tdCountTrendPMResult").text(trendPMResult);
-            $("#tdCountTrendPMGap").text(trendPMGap);
-            $("#tdCountTrendPMPercent").text(trendPMPercent.toFixed(2) +"%");
+            // CURRENT
+            let trendRepairGapNow = trendRepairResultNow - trendRepairPlanNow;
+            let trendRepairPercentNow = trendRepairResultNow / trendRepairPlanNow * 100;
+
+            $("#tdTrendRepairPlanNow").text(trendRepairPlanNow);
+            $("#tdTrendRepairResultNow").text(trendRepairResultNow);
+            $("#tdTrendRepairGapNow").text(trendRepairGapNow);
+            $("#tdTrendRepairPercentNow").text(trendRepairPercentNow.toFixed(2) +"%");
+            $("#tdTrendRepairPendingResultNow").text(trendRepairResultPendingNow);
+            $("#tdTrendRepairAdvanceResultNow").text(trendRepairResultAdvanceNow);
+
+            // LAST 1 DAY
+            let trendRepairGap_1 = trendRepairResult_1 - trendRepairPlan_1;
+            let trendRepairPercent_1 = trendRepairResult_1 / trendRepairPlan_1 * 100;
+
+            $("#tdTrendRepairPlan-1").text(trendRepairPlan_1);
+            $("#tdTrendRepairResult-1").text(trendRepairResult_1);
+            $("#tdTrendRepairGap-1").text(trendRepairGap_1);
+            $("#tdTrendRepairPercent-1").text(trendRepairPercent_1.toFixed(2) +"%");
+            $("#tdTrendRepairPendingResult-1").text(trendRepairResultPending_1);
+            $("#tdTrendRepairAdvanceResult-1").text(trendRepairResultAdvance_1);
+
+            // LAST 2 DAY
+            let trendRepairGap_2 = trendRepairResult_2 - trendRepairPlan_2;
+            let trendRepairPercent_2 = trendRepairResult_2 / trendRepairPlan_2 * 100;
+
+            $("#tdTrendRepairPlan-2").text(trendRepairPlan_2);
+            $("#tdTrendRepairResult-2").text(trendRepairResult_2);
+            $("#tdTrendRepairGap-2").text(trendRepairGap_2);
+            $("#tdTrendRepairPercent-2").text(trendRepairPercent_2.toFixed(2) +"%");
+            $("#tdTrendRepairPendingResult-2").text(trendRepairResultPending_2);
+            $("#tdTrendRepairAdvanceResult-2").text(trendRepairResultAdvance_2);
+
+            //PM
+            // CURRENT
+            let trendPMGapNow = trendPMResultNow - trendPMPlanNow;
+            let trendPMPercentNow = trendPMResultNow / trendPMPlanNow * 100;
+
+            $("#tdTrendPMPlanNow").text(trendPMPlanNow);
+            $("#tdTrendPMResultNow").text(trendPMResultNow);
+            $("#tdTrendPMGapNow").text(trendPMGapNow);
+            $("#tdTrendPMPercentNow").text(trendPMPercentNow.toFixed(2) +"%");
+            $("#tdTrendPMPendingResultNow").text(trendPMResultPendingNow);
+            $("#tdTrendPMAdvanceResultNow").text(trendPMResultAdvanceNow);
+
+            // LAST 1 DAY
+            let trendPMGap_1 = trendPMResult_1 - trendPMPlan_1;
+            let trendPMPercent_1 = trendPMResult_1 / trendPMPlan_1 * 100;
+
+            $("#tdTrendPMPlan-1").text(trendPMPlan_1);
+            $("#tdTrendPMResult-1").text(trendPMResult_1);
+            $("#tdTrendPMGap-1").text(trendPMGap_1);
+            $("#tdTrendPMPercent-1").text(trendPMPercent_1.toFixed(2) +"%");
+            $("#tdTrendPMPendingResult-1").text(trendPMResultPending_1);
+            $("#tdTrendPMAdvanceResult-1").text(trendPMResultAdvance_1);
+
+            // LAST 2 DAY
+            let trendPMGap_2 = trendPMResult_2 - trendPMPlan_2;
+            let trendPMPercent_2 = trendPMResult_2 / trendPMPlan_2 * 100;
+
+            $("#tdTrendPMPlan-2").text(trendPMPlan_2);
+            $("#tdTrendPMResult-2").text(trendPMResult_2);
+            $("#tdTrendPMGap-2").text(trendPMGap_2);
+            $("#tdTrendPMPercent-2").text(trendPMPercent_2.toFixed(2) +"%");
+            $("#tdTrendPMPendingResult-2").text(trendPMResultPending_2);
+            $("#tdTrendPMAdvanceResult-2").text(trendPMResultAdvance_2);
+
+
+
+            // $("#tdCountTrendPMPlan").text(trendPMPlanNow);
+            // $("#tdCountTrendPMResult").text(trendPMResult);
+            // $("#tdCountTrendPMGap").text(trendPMGap);
+            // $("#tdCountTrendPMPercent").text(trendPMPercent.toFixed(2) +"%");
 
             table = new Tabulator("#dashboard2-table1", {
                 data: list,
