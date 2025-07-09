@@ -61,23 +61,79 @@
 									</div>
 								</div>
 								<div class="col-sm-2">
-									<div id="table3">
-										<table style="width:100%">
-											<tbody>
-												<tr>
-													<td colspan="2">STATUS TODAY</td>
-												</tr>
-												<tr>
-													<td style="background-color: #B666D2">FOR REPAIR</td>
-													<td id="tdCountForRepairToday">0</td>
-												</tr>
-												<tr>
-													<td style="background-color: #1589FF">FOR PM</td>
-													<td id="tdCountForPMToday">0</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="row">
+										<div class="col-sm-12">
+											<div id="table3">
+												<table style="width:100%">
+													<tbody>
+														<tr>
+															<td colspan="2">STATUS TODAY</td>
+														</tr>
+														<tr>
+															<td style="background-color: #B666D2">FOR REPAIR</td>
+															<td id="tdCountForRepairToday">0</td>
+														</tr>
+														<tr>
+															<td style="background-color: #1589FF">FOR PM</td>
+															<td id="tdCountForPMToday">0</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
 									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div id="">
+												<table style="width:100%">
+													<tbody>
+														<tr>
+															<td colspan="3">TREND TODAY</td>
+														</tr>
+														<tr>
+															<td rowspan="5" style="background-color: #B666D2">REPAIR</td>
+														</tr>
+														<tr>
+															<td>PLAN</td>
+															<td id="tdCountTrendRepairPlan">0</td>
+														</tr>
+														<tr>
+															<td>RESULT</td>
+															<td id="tdCountTrendRepairResult">0</td>
+														</tr>
+														<tr>
+															<td>GAP</td>
+															<td id="tdCountTrendRepairGap">0</td>
+														</tr>
+														<tr>
+															<td>%</td>
+															<td id="tdCountTrendRepairPercent">0</td>
+														</tr>
+														<tr>
+															<td rowspan="5" style="background-color: #1589FF">PM</td>
+														</tr>
+														<tr>
+															<td>PLAN</td>
+															<td id="tdCountTrendPMPlan">0</td>
+														</tr>
+														<tr>
+															<td>RESULT</td>
+															<td id="tdCountTrendPMResult">0</td>
+														</tr>
+														<tr>
+															<td>GAP</td>
+															<td id="tdCountTrendPMGap">0</td>
+														</tr>
+														<tr>
+															<td>%</td>
+															<td id="tdCountTrendPMPercent">0</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									
 								</div>
 								<div class="col-sm-1"></div>
 								<div class="col-sm-8 col-xs-12">

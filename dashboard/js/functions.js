@@ -60,7 +60,13 @@ function displayTotalDashboard2() {
             // ANG MGA NASA LIST LANG AY 0 RESULT AND NOT MP STATUS AND NOT CANCEL STATUS AND (REPAIR TYPE OR PM TYPE)
             list = list.filter(item => item.z == "0" && item.x != "5" && item.x != "6" && (item.i == "1" || item.i == "3"));
             
-            // console.log(list);
+            console.log(list);
+
+            let trendRepairPlan = 0;
+            let trendRepairResult = 0;
+            let trendPMPlan = 0;
+            let trendPMResult = 0;
+
             list.forEach(function (row) {
                 row.MOLD_MODEL = getDisplayMoldModel(row.c);
                 row.MOLD_PART_NAME = getDisplayMoldPartName(row.c);
@@ -69,6 +75,23 @@ function displayTotalDashboard2() {
                 row.MOLD_CUSTOMER = getDisplayMoldCustomer(row.c);
 
                 // //ISININGIT KO LANG YUNG CODE NA TO PARA IWAS SA MARAMING LOOP, LOOP DIN NAMAN KASE TO EH
+
+                // TREND
+                if(getCurrentDate() == row.g && row.i == "1"){
+                    trendRepairPlan++;
+                }
+
+                if(getCurrentDate() == row.o && row.i == "1"){
+                    trendRepairResult++;
+                }
+                if(getCurrentDate() == row.g && row.i == "3"){
+                    trendPMPlan++;
+                }
+
+                if(getCurrentDate() == row.o && row.i == "3"){
+                    trendPMResult++;
+                }
+                
                 
                 var selectedStatus = statusList.find(function(value) {
                     return value.a === row.x;
@@ -88,6 +111,7 @@ function displayTotalDashboard2() {
                     }
                     if(status == "1"){
                         countForRepair++;
+
                     }
                     if(status == "2"){
                         countForPM++;
@@ -102,12 +126,14 @@ function displayTotalDashboard2() {
                         // countOverAll++; // COUNTS OVERALL (MEDYO NATAGALAN PA AKO SA PART NA PAGCOCODE NETO)
                     }
                 }
-
+   
             });
-
             
+            let trendRepairGap = trendRepairResult - trendRepairPlan;
+            let trendRepairPercent = trendRepairResult / trendRepairPlan * 100;
+            let trendPMGap = trendPMResult - trendPMPlan;
+            let trendPMPercent = trendPMResult / trendPMPlan * 100;
 
-            
 
             // $("#tdCountAllRM").text(countAllRM);
             // $("#tdCountAllRepair").text(countAllRepair);
@@ -118,9 +144,17 @@ function displayTotalDashboard2() {
             $("#tdCountForRepair").text(countForRepair);
             $("#tdCountMP").text(countAllRM);
             // $("#tdTotalOverAll").text(countOverAll)
-            $("#tdTotalOverAll").text(countOverAll)
+            $("#tdTotalOverAll").text(countOverAll);
 
-            
+            $("#tdCountTrendRepairPlan").text(trendRepairPlan);
+            $("#tdCountTrendRepairResult").text(trendRepairResult);
+            $("#tdCountTrendRepairGap").text(trendRepairGap);
+            $("#tdCountTrendRepairPercent").text(trendRepairPercent.toFixed(2) +"%");
+
+            $("#tdCountTrendPMPlan").text(trendPMPlan);
+            $("#tdCountTrendPMResult").text(trendPMResult);
+            $("#tdCountTrendPMGap").text(trendPMGap);
+            $("#tdCountTrendPMPercent").text(trendPMPercent.toFixed(2) +"%");
 
             table = new Tabulator("#dashboard2-table1", {
                 data: list,
