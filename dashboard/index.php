@@ -363,6 +363,19 @@
 											<span class="sr-only">Next</span>
 										</a>
 									</div>
+									<br>
+									<br>
+									<br>
+									<br>
+									<br>
+									<br>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="pull-right">
+												<button class="btn btn-success btn-sm" id="btnExport">Download</button>
+											</div>
+										</div>
+									</div>
 
 									
 									
