@@ -98,6 +98,10 @@ function displayTotalDashboard2() {
             let trendPMResultPending_2 = 0;
             let trendPMResultAdvance_2 = 0;
 
+            //PENDING
+            let trendRepairPending = 0;
+            let trendPMPending = 0;
+
             list.forEach(function (row) {
                 row.MOLD_MODEL = getDisplayMoldModel(row.c);
                 row.MOLD_PART_NAME = getDisplayMoldPartName(row.c);
@@ -229,6 +233,15 @@ function displayTotalDashboard2() {
                 if(getCurrentDate(2) < row.g && getCurrentDate(2) == row.o && row.i == "3"){
                     trendPMResultAdvance_2++;
                 }
+
+
+                //PENDING
+                if(getCurrentDate() > row.g && row.o == "" && row.i == "1"){
+                    trendRepairPending++;
+                }
+                if(getCurrentDate() > row.g && row.o == "" && row.i == "3"){
+                    trendPMPending++;
+                }
    
             });
             
@@ -315,12 +328,8 @@ function displayTotalDashboard2() {
             $("#tdTrendPMPendingResult-2").text(trendPMResultPending_2);
             $("#tdTrendPMAdvanceResult-2").text(trendPMResultAdvance_2);
 
-
-
-            // $("#tdCountTrendPMPlan").text(trendPMPlanNow);
-            // $("#tdCountTrendPMResult").text(trendPMResult);
-            // $("#tdCountTrendPMGap").text(trendPMGap);
-            // $("#tdCountTrendPMPercent").text(trendPMPercent.toFixed(2) +"%");
+            $("#tdTrendRepairPending").text(trendRepairPending);
+            $("#tdTrendPMPending").text(trendPMPending);
 
             table = new Tabulator("#dashboard2-table1", {
                 data: list,

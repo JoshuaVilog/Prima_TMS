@@ -25,7 +25,7 @@
 												<table style="width:100%">
 													<tbody>
 														<tr>
-															<td colspan="5">TREND TODAY</td>
+															<td colspan="5">TREND</td>
 														</tr>
 														<tr>
 															<td>DATE</td>
@@ -35,7 +35,7 @@
 															<td id="tdCurrentDate">0000-00-00</td>
 														</tr>
 														<tr>
-															<td rowspan="7" style="background-color: #B666D2">REPAIR</td>
+															<td rowspan="6" style="background-color: #B666D2">REPAIR</td>
 														</tr>
 														<tr>
 															<td>PLAN</td>
@@ -55,12 +55,12 @@
 															<td id="tdTrendRepairGap-1">0</td>
 															<td id="tdTrendRepairGapNow">0</td>
 														</tr>
-														<tr>
+														<!-- <tr>
 															<td>%</td>
 															<td id="tdTrendRepairPercent-2">0</td>
 															<td id="tdTrendRepairPercent-1">0</td>
 															<td id="tdTrendRepairPercentNow">0</td>
-														</tr>
+														</tr> -->
 														<tr>
 															<td>PENDING RESULT</td>
 															<td id="tdTrendRepairPendingResult-2">0</td>
@@ -75,7 +75,7 @@
 														</tr>
 
 														<tr>
-															<td rowspan="7" style="background-color: #1589FF">PM</td>
+															<td rowspan="6" style="background-color: #1589FF">PM</td>
 														</tr>
 														<tr>
 															<td>PLAN</td>
@@ -95,12 +95,12 @@
 															<td id="tdTrendPMGap-1">0</td>
 															<td id="tdTrendPMGapNow">0</td>
 														</tr>
-														<tr>
+														<!-- <tr>
 															<td>%</td>
 															<td id="tdTrendPMPercent-2">0</td>
 															<td id="tdTrendPMPercent-1">0</td>
 															<td id="tdTrendPMPercentNow">0</td>
-														</tr>
+														</tr> -->
 														<tr>
 															<td>PENDING RESULT</td>
 															<td id="tdTrendPMPendingResult-2">0</td>
@@ -112,6 +112,24 @@
 															<td id="tdTrendPMAdvanceResult-2">0</td>
 															<td id="tdTrendPMAdvanceResult-1">0</td>
 															<td id="tdTrendPMAdvanceResultNow">0</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<br>
+											<div>
+												<table>
+													<tbody>
+														<tr>
+															<td colspan="2">PENDING</td>
+														</tr>
+														<tr>
+															<td style="background-color: #B666D2">REPAIR</td>
+															<td id="tdTrendRepairPending">0</td>
+														</tr>
+														<tr>
+															<td style="background-color: #1589FF">PM</td>
+															<td id="tdTrendPMPending">0</td>
 														</tr>
 													</tbody>
 												</table>

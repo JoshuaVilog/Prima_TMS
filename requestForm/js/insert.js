@@ -18,7 +18,7 @@ $("#btnSubmitRequest").click(function(){
 
     let isValid = true;
 
-    if(moldControl == "" || moldControl == null || targetDate == "" || targetTime == "" || dateRequest == "" || timeRequest == ""){
+    if(moldControl == "" || moldControl == null || targetDate == "" || targetTime == "" || dateRequest == "" || timeRequest == "" || pr == ""){
         isValid = false;
     }
 
