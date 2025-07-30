@@ -100,7 +100,7 @@ function getStatus2List(){
         {a:"0", b:""},
         {a:"1", b:"FOR REPAIR"},
         {a:"2", b:"FOR PM"},
-        {a:"3", b:"FOR TRIAL"},
+        {a:"3", b:"READY FOR MP"},
         {a:"4", b:"QC INSPECTION"},
         {a:"5", b:"MP"},
         {a:"6", b:"CANCELLED"},

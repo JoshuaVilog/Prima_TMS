@@ -372,7 +372,7 @@ function displayTotalDashboard2() {
                     {title: "CONTROL #", field: "b", headerFilter: "input", formatter: displayControlNo},
                     {title: "MOLD CODE", field: "c", headerFilter: "input", formatter: displayMoldCode},
                     {title: "DEFECT", field: "k", mutator: mutatorDisplayDefect, headerFilter: "input"},
-                    {title: "CAVITY", field: "m", headerFilter: "input"},
+                    {title: "LOCATION", field: "m", headerFilter: "input"},
                     {title: "REQUEST DATE", field: "d", headerFilter: "input"},
                     {title: "TARGET DATE", field: "g", headerFilter: "input"},
                     {title: "TARGET TIME", field: "h", headerFilter: "input"},

@@ -14,7 +14,7 @@ function fetchDataAndInitializeTable() {
         type: 'POST',
         dataType: 'json',
         success: function(list) {
-            // console.log(list);
+            console.log(list);
             let list1 = list.filter(item => (item.x == '0' || item.x == "1" || item.x == "2") && item.z == "0");
             
             // let list2 = list.filter(item => item.x != '0' && item.x != "1" && item.x != "2");
@@ -119,6 +119,7 @@ function fetchDataAndInitializeTable() {
                     {title: "TOOL #", field: "c", formatter: displayMoldTool, resizable:false},
                     {title: "ASSY DATETIME", field: "ASSY_DATETIME", resizable:false},
                     {title: "PIC", field: "q", formatter: displayPIC, resizable:false},
+                    {title: "REMARKS", field: "aa", resizable:false, },
                     {title: "STATUS", field: "x", formatter: displayStatus2, resizable:false, frozen: true},
                 ],
                 initialSort: [
