@@ -18,7 +18,7 @@
                         <div class="page-header">
                             <h1>MOLD HISTORY</h1>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class='col-xs-12 col-sm-3 mb-4'>
                                 <div class='well well-lg'>
                                     <h4>
@@ -27,7 +27,7 @@
                                     <h2 id="hTotalRequest">0</h2>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 						<div class="row">
                             <div class="col-xs-12 col-sm-12 pricing-box">
                                 <div class="widget-box widget-color-orange" style="min-height:1000px;">
